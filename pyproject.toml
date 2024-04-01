@@ -1,0 +1,7 @@
+[tool.isort]
+profile = "black"
+src_paths = ["src/requests", "test"]
+
+[tool.pytest.ini_options]
+minversion = "6.2"
+testpaths = ["tests"]
