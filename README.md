@@ -1,4 +1,6 @@
 # Description
+Efficient set consolidation
+
 Given a list of sets, consolidate sets that share at least one member.
 See set consolidation - see https://rosettacode.org/wiki/Set_consolidation
 This is also known as connected components in graphs.
