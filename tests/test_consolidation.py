@@ -62,8 +62,14 @@ def verify_sets(ids_pool_size, n_sets, max_set_size):
     print(consolidator.n_groups)
     return consolidator.n_groups
 
-for ids_pool_size in [10**3, 10**5]:
-    for n_sets in [10**3, 10**5]:
-        for max_set_size in [2**1, 2**4, 2**8, 2**12]:
-            print(f"{ids_pool_size} {n_sets} {max_set_size}")
-            set_count = verify_sets(ids_pool_size, n_sets, max_set_size)
+def test_all():
+    expected = [1, 1, 1, 1, 1, 1, 24, 1, 1, 1, 1, 1, 686, 47, 1, 266, 1, 1]
+    count_list = []
+    for ids_pool_size in [10**2, 10**3, 10**4]:
+        for n_sets in [10**3, 10**4]:
+            for max_set_size in [2**2, 2**4, 2**8]:
+                print(f"{ids_pool_size} {n_sets} {max_set_size}")
+                set_count = verify_sets(ids_pool_size, n_sets, max_set_size)
+                count_list.append(set_count)
+    assert count_list == expected
+    return None
