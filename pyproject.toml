@@ -1,6 +1,6 @@
 [tool.isort]
 profile = "black"
-src_paths = ["src/requests", "test"]
+src_paths = ["src/entity_merge"]
 
 [tool.pytest.ini_options]
 minversion = "6.2"
